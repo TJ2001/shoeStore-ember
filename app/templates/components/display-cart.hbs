@@ -2,4 +2,6 @@
   {{item.name}} -- {{item.price}}
 {{/each}}
 
-<button>order</button>
+<button {{action 'total' shoppingCart.items}}>order</button>
+
+<h4>total price: {{totalPrice}}</h4>
