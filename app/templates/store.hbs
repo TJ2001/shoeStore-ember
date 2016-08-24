@@ -1,7 +1,12 @@
+<h3>New Shoes</h3>
 {{new-shoe save2="save3" shoe=model}}
+<br>
 
+<h3>List of all shoes:</h3>
 {{#each model as |shoe|}}
   {{product-tile shoe=shoe}}
 {{/each}}
+<br>
 
+<h3>Shoes in your cart</h3>
 {{display-cart}}

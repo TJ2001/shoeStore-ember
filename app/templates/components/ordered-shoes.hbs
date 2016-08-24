@@ -1,1 +1,5 @@
-{{yield}}
+{{#each shoppingCart.items as |item|}}
+  {{item.name}} -- {{item.price}}
+{{/each}}
+
+<button  {{action "order" item}}>order</button>

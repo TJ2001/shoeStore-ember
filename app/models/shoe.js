@@ -6,4 +6,5 @@ export default DS.Model.extend({
   type: DS.attr(),
   size: DS.attr(),
   price: DS.attr(),
+  order: DS.hasMany('order', {async: true})
 });

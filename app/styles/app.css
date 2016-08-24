@@ -1,0 +1,9 @@
+.resize {
+  width: 100px;
+  height: 100px;
+}
+
+.display-unit {
+  border-style: solid;
+  border-width: medium;
+}
