@@ -12,7 +12,12 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
-
+    firebase:{
+      apiKey: "AIzaSyCDO2q3j1vE5hQsCUgx6x5vQgYMIj64G2U",
+      authDomain: "shoe-store-e692e.firebaseapp.com",
+      databaseURL: "https://shoe-store-e692e.firebaseio.com",
+      storageBucket: "",
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
