@@ -5,13 +5,28 @@ export default Ember.Route.extend({
     return this.store.findRecord('shoe', params.shoe_id);
   },
   actions: {
-    saveFeedback() {
-      var params = {
-        user: this.get('user'),
-        comment: this.get('comment')};
+    saveShoe(params) {
+      console.log(params);
       var newFeedback = this.store.createRecord('feedback', params);
-        newFeedback.save();
-        this.transitionTo('shoe');
-      }
+      var shoe = params.shoe;
+      shoe.get('feedbacks').addObject(newFeedback);
+      newFeedback.save().then(function() {
+        return shoe.save();
+      });
+      this.transitionTo('shoe', params.shoe);
     }
+  }
 });
+
+
+
+
+
+// export default Ember.Route.extend({
+//   model() {
+//     return Ember.RSVP.hash({
+//       shoes: this.store.findRecord('shoe'),
+//       feedbacks: this.store.findRecord('feedback')
+//     });
+//   }
+// });
