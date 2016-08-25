@@ -4,5 +4,5 @@
 
 <h3>List of all shoes:</h3>
 {{#each model as |shoe|}}
-  {{product-tile shoe=shoe}}
+  {{supply-tile shoe=shoe destroyShoe="destroyShoe" update="update"}}
 {{/each}}

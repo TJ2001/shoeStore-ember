@@ -1,5 +1,5 @@
-{{#if addNewShoe}}
-  <h1>New Shoe</h1>
+{{#if updateShoeForm}}
+<h1>{{shoe.name}}</h1>
     <div>
       <form>
         <div class="form-group">
@@ -27,9 +27,9 @@
           {{input value=price id="price"}}
         </div>
 
-        <button {{action 'save1'}}>Save</button>
+        <button {{action 'update' shoe}}>Update Shoe</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'shoeFormShow'}}>New Shoe</button>
+    <button {{action 'shoeFormShow'}}>Update</button>
 {{/if}}

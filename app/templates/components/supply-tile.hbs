@@ -1,0 +1,8 @@
+<div class="display-unit col-sm-3">
+  <h3>{{shoe.name}}</h3>
+  <img class=resize src={{shoe.image}}>
+  <h4>Size: {{shoe.size}}</h4>
+  <h4>Price: ${{shoe.price}}</h4>
+  {{update-supply shoe=shoe update="update"}}
+  <button {{action 'remove' shoe}}>Remove</button>
+</div>
