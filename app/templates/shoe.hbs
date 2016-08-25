@@ -2,3 +2,7 @@
 <img src={{model.image}}>
 
 {{leave-feedback saveShoe="saveShoe" shoe=model}}
+
+{{#each model.feedbacks as |feedback|}}
+  {{display-feedback feedback=feedback}}
+{{/each}}
