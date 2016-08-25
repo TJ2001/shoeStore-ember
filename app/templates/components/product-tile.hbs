@@ -1,6 +1,6 @@
 <div class="display-unit col-sm-3">
-  <h3>{{shoe.name}}</h3>
-  <img class=resize src={{shoe.image}}>
+  {{#link-to 'shoe' shoe.id}}<h3>{{shoe.name}}</h3>
+  <img class=resize src={{shoe.image}}>{{/link-to}}
   <h4>Size: {{shoe.size}}</h4>
   <h4>Price: ${{shoe.price}}</h4>
   <button {{action 'addToCart' shoe}}>Add to Cart</button>
