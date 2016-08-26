@@ -14,7 +14,8 @@ export default Ember.Route.extend({
         return shoe.save();
       });
       this.transitionTo('shoe', params.shoe);
-    }
+    },
+
   }
 });
 

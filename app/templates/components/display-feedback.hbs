@@ -1,3 +1,7 @@
-<p>{{feedback.user}}</p>
-<p>{{feedback.comment}}</p>
-<p>{{feedback.rating}}</p>
+
+{{#each sortedFeedbacks as |feedback|}}
+  <p>{{feedback.user}} |
+  {{feedback.comment}} |
+  {{feedback.rating}}</p>
+
+{{/each}}
